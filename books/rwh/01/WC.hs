@@ -1,3 +1,3 @@
-main = interact wordCount
+main = interact charCount
   where
-    wordCount input = show (length (words input)) ++ "\n"
+    charCount input = show (length input) ++ "\n"
