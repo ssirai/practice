@@ -21,6 +21,12 @@ cellShape cellSize posXi posYi =
       y2      = posY + cs
   in Polygon [(x1, y1), (x1, y2), (x2, y2), (x2, y1)]
 
+pictureOfCell :: Int -> Int -> Int -> Int -> Cell -> Picture
+pictureOfCell oldAge cellSize posX posY cell =
+  case cell of
+    CellAlive age -> Color (ageColor oldAge age)	(cellShape cellSize posX posY)
+    CellDead      -> Color (greyN 0.8) (cellShape cellSize posX posY)
+
 ageColor :: Int -> Int -> Color
 ageColor oldAge age =
   let (r, g, b) = rampColorHotToCold 0 (fromIntegral oldAge) (fromIntegral age)
