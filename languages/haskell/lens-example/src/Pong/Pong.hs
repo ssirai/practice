@@ -2,12 +2,12 @@
 
 module Main where
 
-import Control.Applicative ((<$>), (<*>))
+import Control.Applicative ((<$>))
 import Control.Lens
 import Control.Monad.State (State, execState, get)
 import Control.Monad (when)
 
-import Data.Set (Set, member, empty, insert, delete)
+import Data.Set (Set, empty)
 
 import Graphics.Gloss
 import Graphics.Gloss.Interface.Pure.Game
