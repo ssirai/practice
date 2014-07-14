@@ -2,13 +2,10 @@ function factor{T<:Integer}(x :: T)
   lists = Int[]
   t = sqrt(x)
   i = 3
-  if x % 2 == 0
-    push!(lists, 2)
-  end
+  x % 2 == 0 && push!(lists, 2)
+
   while i < t
-    if x % i == 0 && isprime(i)
-      push!(lists, i)
-    end
+    x % i == 0 && isprime(i) && push!(lists, i)
     i += 2
   end
   lists
