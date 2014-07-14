@@ -11,9 +11,7 @@ function factor{T<:Integer}(x :: T)
   lists
 end
 
-ans = factor(600851475143) |> maximum
+factor(600851475143) |> maximum |> println
 
 # cheating?
 # ans, _ = factor(600851475143) |> maximum
-
-println(ans)
